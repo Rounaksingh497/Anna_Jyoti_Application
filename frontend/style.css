@@ -60,7 +60,7 @@
   /* Radius */
   --r-sm: 8px; --r: 12px; --r-lg: 18px; --r-xl: 24px;
 
-  /* Layered, tinted 3D shadows — warm umber tone instead of flat black */
+  /* Layered, tinted 3D shadows */
   --sh-sm: 0 2px 6px rgba(50, 32, 10, 0.08), 0 1px 2px rgba(50, 32, 10, 0.06);
   --sh:    0 10px 24px rgba(50, 32, 10, 0.10), 0 3px 8px rgba(50, 32, 10, 0.07);
   --sh-lg: 0 24px 48px rgba(28, 18, 6, 0.16), 0 8px 16px rgba(28, 18, 6, 0.08);
@@ -96,7 +96,7 @@ body {
   overflow-x: hidden;
   position: relative;
 }
-/* Fine film-grain laid across the whole app for a tactile, non-flat surface */
+/* Fine film-grain laid across the whole app */
 body::before {
   content: "";
   position: fixed;
@@ -151,7 +151,6 @@ select:focus-visible, textarea:focus-visible {
   overflow: hidden;
   isolation: isolate;
 }
-/* Diagonal light-sweep shine on hover — a single, deliberate flourish */
 .btn-primary::after {
   content: "";
   position: absolute;
@@ -209,7 +208,7 @@ input:focus, select:focus, textarea:focus {
 
 
 /* ═══════════════════════════════════════════════════════
-   1. PREMIUM AUTH SCREEN — "Harvest Dusk" hero
+   1. PREMIUM AUTH SCREEN
 ═══════════════════════════════════════════════════════ */
 .auth-layout { display: grid; grid-template-columns: 1.2fr 1fr; min-height: 100vh; }
 
@@ -222,7 +221,6 @@ input:focus, select:focus, textarea:focus {
   display: flex; flex-direction: column; justify-content: center;
   position: relative; overflow: hidden;
 }
-/* Ikat-inspired diamond lattice texture, subtle, referencing woven farm textiles */
 .auth-hero::before {
   content: "";
   position: absolute; inset: 0;
@@ -334,7 +332,7 @@ input:focus, select:focus, textarea:focus {
 
 
 /* ═══════════════════════════════════════════════════════
-   3. FROSTED GLASS NAVBAR — indigo-to-green glass
+   3. FROSTED GLASS NAVBAR 
 ═══════════════════════════════════════════════════════ */
 .navbar {
   position: sticky; top: 0; z-index: 900; height: var(--nav-h);
@@ -389,7 +387,6 @@ input:focus, select:focus, textarea:focus {
   transform-style: preserve-3d;
   position: relative;
 }
-/* Faint top sheen for tactile glass depth */
 .dash-card::before {
   content: "";
   position: absolute; inset: 0;
@@ -402,7 +399,7 @@ input:focus, select:focus, textarea:focus {
   background: rgba(255, 255, 255, 0.88) !important;
 }
 
-/* Stats Row — color-coded "clay tile" icon chips */
+/* Stats Row */
 .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-5); margin-bottom: var(--sp-6); }
 .stat-card { display: flex; align-items: center; gap: var(--sp-4); padding: var(--sp-5); }
 .stat-icon {
@@ -420,8 +417,6 @@ input:focus, select:focus, textarea:focus {
 
 /* Dashboard Grid Layout */
 .dashboard-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-6); }
-
-/* Card Headers */
 .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-5); }
 .card-header h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--green-900); }
 .card-badge { background: var(--green-100); color: var(--green-700); font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 999px; }
@@ -435,27 +430,21 @@ input:focus, select:focus, textarea:focus {
 .market-table tr:last-child td { border-bottom: none; }
 
 .crop-rec-card { grid-column: span 2; }
-
 .weather-temp-block h1 { font-family: var(--font-serif) !important; font-weight: 600 !important; }
-
 
 /* ═══════════════════════════════════════════════════════
    5. AGRISHOP UI
 ═══════════════════════════════════════════════════════ */
 .shop-layout { display: grid; grid-template-columns: 260px 1fr; gap: var(--sp-6); align-items: start; }
-
 .shop-sidebar { position: sticky; top: calc(var(--nav-h) + var(--sp-6)); }
 .shop-sidebar h4 { font-size: 13px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: var(--sp-4); }
 .cat-btn { display: block; width: 100%; text-align: left; padding: 12px 16px; border-radius: var(--r); font-size: 15px; font-weight: 600; color: var(--gray-600); margin-bottom: 6px; transition: all var(--t-fast); }
 .cat-btn:hover { background: rgba(255,255,255,0.6); color: var(--terracotta); }
 .cat-btn.active { background: linear-gradient(120deg, var(--saffron-50), #ffe6b8); color: var(--terracotta-d); box-shadow: var(--sh-sm); }
-
 .shop-tab { padding: 12px 20px; font-weight: 700; color: var(--text-muted); border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all var(--t-fast); }
 .shop-tab.active { color: var(--terracotta); border-bottom-color: var(--saffron); }
-
 .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-5); }
 
-/* Product cards — clean commerce depth, richer hover lift */
 .product-card {
   border-radius: var(--r-xl);
   overflow: hidden;
@@ -490,7 +479,6 @@ input:focus, select:focus, textarea:focus {
 }
 .btn-add-cart:hover { transform: translateY(-2px) scale(1.04); box-shadow: 0 6px 16px rgba(195, 80, 42, 0.4); }
 
-/* Quantity Selector Styles */
 .qty-action-wrap { display: flex; align-items: center; gap: var(--sp-2); }
 .qty-input {
   width: 50px !important; padding: 6px 4px !important; text-align: center;
@@ -525,7 +513,6 @@ input:focus, select:focus, textarea:focus {
 }
 .modal-body { padding: var(--sp-6); overflow-y: auto; flex: 1; }
 
-
 /* ═══════════════════════════════════════════════════════
    7. AI MITRA CHATBOT UI
 ═══════════════════════════════════════════════════════ */
@@ -542,7 +529,6 @@ input:focus, select:focus, textarea:focus {
     overflow: hidden;
     border: 1px solid var(--border);
 }
-
 .chat-header {
     background: linear-gradient(120deg, var(--green-50), var(--saffron-50));
     padding: 16px 24px;
@@ -551,7 +537,6 @@ input:focus, select:focus, textarea:focus {
     align-items: center;
     gap: 15px;
 }
-
 .bot-avatar {
     font-size: 28px;
     background: linear-gradient(145deg, var(--green-100), var(--green-50));
@@ -563,23 +548,8 @@ input:focus, select:focus, textarea:focus {
     border-radius: 50%;
     box-shadow: var(--sh-sm);
 }
-
-.bot-info h3 {
-    font-family: var(--font-display);
-    font-size: 18px;
-    color: var(--green-900);
-    margin: 0 0 4px 0;
-}
-
-.bot-status {
-    font-size: 12px;
-    color: var(--text-muted);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 600;
-}
-
+.bot-info h3 { font-family: var(--font-display); font-size: 18px; color: var(--green-900); margin: 0 0 4px 0; }
+.bot-status { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; font-weight: 600; }
 .status-dot {
     width: 8px;
     height: 8px;
@@ -604,13 +574,9 @@ input:focus, select:focus, textarea:focus {
     flex-direction: column;
     gap: 20px;
 }
-
-/* Scrollbar */
 .chat-history::-webkit-scrollbar { width: 6px; }
 .chat-history::-webkit-scrollbar-track { background: transparent; }
 .chat-history::-webkit-scrollbar-thumb { background: var(--gray-200); border-radius: 10px; }
-
-/* Messages */
 .chat-msg { display: flex; gap: 12px; max-width: 85%; animation: fadeUp 0.3s var(--ease); }
 .chat-msg.bot { align-self: flex-start; }
 .chat-msg.user { align-self: flex-end; flex-direction: row-reverse; }
@@ -627,9 +593,7 @@ input:focus, select:focus, textarea:focus {
     box-shadow: var(--sh-sm);
     flex-shrink: 0;
 }
-
 .chat-msg.user .msg-avatar { display: none; }
-
 .msg-bubble {
     padding: 14px 18px;
     border-radius: 16px;
@@ -637,88 +601,27 @@ input:focus, select:focus, textarea:focus {
     line-height: 1.6;
     box-shadow: var(--sh-sm);
 }
-
-.chat-msg.bot .msg-bubble {
-    background: var(--white);
-    color: var(--text);
-    border: 1px solid var(--border);
-    border-top-left-radius: 4px;
-}
-
+.chat-msg.bot .msg-bubble { background: var(--white); color: var(--text); border: 1px solid var(--border); border-top-left-radius: 4px; }
 .chat-msg.bot .msg-bubble strong { color: var(--green-900); font-weight: 800; }
+.chat-msg.user .msg-bubble { background: linear-gradient(135deg, var(--green-600), var(--green-800)); color: #fff; border-top-right-radius: 4px; }
 
-.chat-msg.user .msg-bubble {
-    background: linear-gradient(135deg, var(--green-600), var(--green-800));
-    color: #fff;
-    border-top-right-radius: 4px;
-}
-
-/* Input Area */
-.chat-input-area {
-    padding: 16px 24px;
-    background: var(--white);
-    border-top: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.chat-input {
-    flex: 1;
-    border: none !important;
-    background: var(--gray-100);
-    padding: 14px 20px;
-    border-radius: 999px;
-    font-size: 15px;
-}
-
-.chat-input:focus {
-    box-shadow: 0 0 0 2px var(--saffron-50) inset !important;
-}
+.chat-input-area { padding: 16px 24px; background: var(--white); border-top: 1px solid var(--border); display: flex; align-items: center; gap: 12px; }
+.chat-input { flex: 1; border: none !important; background: var(--gray-100); padding: 14px 20px; border-radius: 999px; font-size: 15px; }
+.chat-input:focus { box-shadow: 0 0 0 2px var(--saffron-50) inset !important; }
 
 .chat-mic-btn {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--white);
-    border: 1px solid var(--border);
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all var(--t-fast);
-    color: var(--text-muted);
+    width: 44px; height: 44px; border-radius: 50%; background: var(--white); border: 1px solid var(--border); font-size: 20px;
+    display: flex; align-items: center; justify-content: center; transition: all var(--t-fast); color: var(--text-muted);
 }
-
 .chat-mic-btn:hover { background: var(--gray-100); transform: scale(1.08); color: var(--terracotta); }
-
 .chat-send-btn {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--saffron-l), var(--terracotta));
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all var(--t-fast);
-    box-shadow: 0 4px 14px rgba(195, 80, 42, 0.35);
+    width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--saffron-l), var(--terracotta));
+    color: #fff; display: flex; align-items: center; justify-content: center; transition: all var(--t-fast); box-shadow: 0 4px 14px rgba(195, 80, 42, 0.35);
 }
-
 .chat-send-btn:hover { transform: scale(1.08) rotate(-8deg); box-shadow: 0 6px 18px rgba(195, 80, 42, 0.45); }
 
-@media (max-width: 768px) {
-    .chat-widget { height: 75vh; border-radius: var(--r); }
-    .chat-header { padding: 12px 16px; }
-    .chat-history { padding: 16px; }
-    .chat-input-area { padding: 12px 16px; }
-}
-
-/* Split Layout for Support */
+/* Split Layout & Dropdowns */
 .support-split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-6); align-items: start; }
-@media (max-width: 768px) { .support-split-layout { grid-template-columns: 1fr; } }
-
-/* Profile Dropdown Menu */
 .dropdown-menu {
   position: absolute; top: 100%; right: 0; margin-top: 10px;
   background: var(--white); border-radius: var(--r);
@@ -729,12 +632,10 @@ input:focus, select:focus, textarea:focus {
 .dropdown-menu.hidden { display: none; }
 .dropdown-menu button {
   padding: 12px 16px; text-align: left; font-size: 14px; font-weight: 600;
-  color: var(--text); background: none; border: none; cursor: pointer;
-  transition: background var(--t-fast);
+  color: var(--text); background: none; border: none; cursor: pointer; transition: background var(--t-fast);
 }
 .dropdown-menu button:hover { background: var(--gray-50); }
 
-/* FAQ Accordion (From previous concepts) */
 .faq-accordion { border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
 .faq-item { border-bottom: 1px solid var(--border); }
 .faq-item:last-child { border-bottom: none; }
@@ -744,7 +645,7 @@ input:focus, select:focus, textarea:focus {
 
 
 /* ═══════════════════════════════════════════════════════
-   RESPONSIVE (Mobile Tuning)
+   RESPONSIVE (Mobile Tuning) - FULLY UPDATED
 ═══════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .auth-layout { grid-template-columns: 1fr; }
@@ -756,11 +657,105 @@ input:focus, select:focus, textarea:focus {
   .shop-layout { grid-template-columns: 1fr; }
   .shop-sidebar { position: static; margin-bottom: var(--sp-4); }
   .dash-card:hover { transform: translateY(-6px); }
+  .support-split-layout { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
-  .nav-center { display: none; }
-  .stats-row { grid-template-columns: 1fr; }
-  .products-grid { grid-template-columns: 1fr; }
-  .brand-name { font-size: 46px; }
+  /* ── 1. Header Layout (Two Rows) ── */
+  .navbar {
+    height: auto; 
+    padding: 12px 16px;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+  }
+  .nav-brand {
+    width: auto;
+    flex: none; /* Removed flex: 1 so it only takes up the space it needs */
+  }
+  
+  .nav-right {
+    width: auto;
+    display: flex !important; 
+    margin-left: auto; /* This acts like a spring, pushing the button to the far right edge */
+  }
+  .nav-user {
+    padding: 6px 12px;
+  }
+  #nav-farmer-name {
+    display: none; 
+  }
+  .nav-user::before {
+    content: "👤";
+    font-size: 14px;
+    margin-right: 4px;
+  }
+
+  /* ── 2. Bottom Row: Navigation Icons ── */
+  .nav-center {
+    display: flex !important;
+    position: relative !important; 
+    order: 3; 
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 12px;
+    background: transparent;
+  }
+  .nav-center .nav-link span { display: none; }
+  .nav-center .nav-link { font-size: 22px; padding: 8px 12px; }
+
+  /* ── 3. Base App Spacing ── */
+  .page-container { padding: var(--sp-4) var(--sp-3); }
+
+  /* ── 4. Forms & Grids (Single Column) ── */
+  .form-row-2, .stats-row, .products-grid { 
+    grid-template-columns: 1fr; 
+    gap: var(--sp-4); 
+  }
+  .shop-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  /* ── 5. Admin Panel & Table Overflow Fixes ── */
+  
+  /* Disable inline sticky positioning for the "Add Product" & "Add Scheme" sidebars */
+  #page-admin .dash-card[style*="sticky"] {
+    position: relative !important;
+    top: 0 !important;
+    height: auto !important;
+    margin-bottom: var(--sp-6);
+  }
+
+  /* Prevent Grid/Flex children from expanding past screen width */
+  .shop-layout, 
+  .admin-main-content {
+    min-width: 0; 
+    width: 100%;
+  }
+
+  /* Force cards to stay within the viewport */
+  .dash-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto; /* Fallback for content wrapping */
+  }
+
+  /* Enable smooth horizontal scrolling for data tables */
+  div[style*="overflow-x: auto"] {
+    width: 100%;
+    -webkit-overflow-scrolling: touch; /* Momentum scrolling for iOS */
+  }
+
+  .market-table-wrap { overflow-x: auto; }
+  .market-table { white-space: nowrap; } /* Prevents text from squishing */
+
+  /* ── 6. Auth Screen Mobile Adjustments ── */
+  .hero-stat-row { flex-wrap: wrap; gap: var(--sp-4); }
+  .auth-form-panel { padding: var(--sp-6) var(--sp-4); }
+  .brand-name { font-size: 40px; }
+  .auth-tabs { flex-wrap: wrap; }
+  
+  /* ── 7. Chatbot Widget ── */
+  .chat-widget { height: 75vh; border-radius: var(--r); }
+  .chat-header { padding: 12px 16px; }
+  .chat-history { padding: 16px; }
+  .chat-input-area { padding: 12px 16px; }
 }

@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnAdminLogin) {
         btnAdminLogin.addEventListener('click', (e) => {
             e.preventDefault();
-            if (adminUsername.value.trim() === "admin" && adminPassword.value.trim() === "admin123") {
+            if (adminUsername.value.trim() === "admin" && adminPassword.value.trim() === "admin497497") {
                 launchAdminDashboard();
             } else {
                 alert("❌ Invalid Admin Credentials!");
