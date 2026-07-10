@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const API_URL = 'http://localhost:5000/api';
+    const API_URL = 'https://anna-jyoti-application-2.onrender.com/api';
     const authScreen = document.getElementById("auth-screen");
     const appScreen = document.getElementById("app-screen");
     

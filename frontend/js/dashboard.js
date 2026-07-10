@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             // 2. Call your Node.js AI Route
-            const res = await fetch('http://localhost:5000/api/ai/recommend-crop', {
+            const res = await fetch('https://anna-jyoti-application-2.onrender.com/api/ai/recommend-crop', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ soil, season, region, land })
